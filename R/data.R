@@ -4,7 +4,7 @@
 #'
 #' @format Los datos son obtenidos de un repositorio de GitHub.
 #' \describe{
-#' \item{NH0046}{muestra de datos de la estación "NH0098"}
+#' \item{NH0046}{muestra de datos de la estación "NH0046"}
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
@@ -28,7 +28,7 @@
 #'
 #' @format Los datos son obtenidos de un repositorio de GitHub.
 #' \describe{
-#' \item{NH0437}{muestra de datos de la estación "NH0098"}
+#' \item{NH0437}{muestra de datos de la estación "NH0437"}
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
@@ -40,7 +40,7 @@
 #'
 #' @format Los datos son obtenidos de un repositorio de GitHub.
 #' \describe{
-#' \item{NH0472}{muestra de datos de la estación "NH0098"}
+#' \item{NH0472}{muestra de datos de la estación "NH0472"}
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
@@ -52,7 +52,7 @@
 #'
 #' @format Los datos son obtenidos de un repositorio de GitHub.
 #' \describe{
-#' \item{NH0910}{muestra de datos de la estación "NH0098"}
+#' \item{NH0910}{muestra de datos de la estación "NH0910"}
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
