@@ -1,5 +1,5 @@
 ---
-title: "vinieta_1"
+title: "Como usar el paquete PaqueteMeteorologia"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{vinieta_1}
@@ -16,4 +16,9 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(PaqueteMeteorologia)
+```
+
+Esta es una viñeta de prueba. Podemos mostrar como funciona la funcion `suma`:
+```{r}
+
 ```
