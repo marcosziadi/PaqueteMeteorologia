@@ -11,20 +11,20 @@ estaciones meteorologicas.
 
 ## Instalacion
 
-You can install the development version of PaqueteMeteorologia from
-[GitHub](https://github.com/) with:
+Podes instalar la versión en desarrollo de PaqueteMeteorologia en
+[GitHub](https://github.com/) con:
 
 ``` r
 # install.packages("pak")
 pak::pak("marcosziadi/PaqueteMeteorologia")
 ```
 
-## Example
+## Ejemplo
 
-This is a basic example which shows you how to solve a common problem:
+Este es un ejemplo basico que muestra como solucionar un problema común:
 
 ``` r
 library(PaqueteMeteorologia)
-
-#descargar_datos("NH0910", "~/")
+celsius_to_fahrenheit(-10)
+#> [1] 14
 ```
