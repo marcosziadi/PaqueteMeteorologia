@@ -1,4 +1,4 @@
-#' Segundo conjunto de datos
+#' Primer conjunto de datos
 #'
 #' Los datos contienen información de las distintas estaciones meteorológicas.
 #'
@@ -8,7 +8,7 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-"NH0046"
+NH0046 <- "NH0046"
 
 #' Segundo conjunto de datos
 #'
@@ -20,9 +20,9 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-"NH0098"
+NH0098 <- "NH0098"
 
-#' Segundo conjunto de datos
+#' Tercer conjunto de datos
 #'
 #' Los datos contienen información de las distintas estaciones meteorológicas.
 #'
@@ -32,9 +32,9 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-"NH0437"
+NH0437 <-"NH0437"
 
-#' Segundo conjunto de datos
+#' Cuarto conjunto de datos
 #'
 #' Los datos contienen información de las distintas estaciones meteorológicas.
 #'
@@ -44,9 +44,9 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-"NH0472"
+NH0472 <- "NH0472"
 
-#' Segundo conjunto de datos
+#' Quinto conjunto de datos
 #'
 #' Los datos contienen información de las distintas estaciones meteorológicas.
 #'
@@ -56,4 +56,4 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-"NH0910"
+NH0910 <- "NH0910"
