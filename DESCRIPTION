@@ -1,12 +1,11 @@
 Package: PaqueteMeteorologia
-Title: Este paquete ofrece funciones para el análisis y descarga de datos meteorológicos.
+Title: Este paquete ofrece funciones para el análisis y descarga de datos meteorológicos
 Version: 0.0.0.9000
 Authors@R: 
     c(person("Marcos", "Ziadi", email = "marcosziadi@gmail.com", role = c("aut", "cre")),
       person("Santino", "Malatini", email = "santinomalatini@gmail.com", role = "aut"))
 Description: Este paquete no esta pensado para ser instalado, es un paquete pensado y creado para una materia universitaria.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
@@ -19,4 +18,5 @@ VignetteBuilder: knitr
 Imports:
     readr,
     dplyr,
+    lubridate,
     ggplot2
