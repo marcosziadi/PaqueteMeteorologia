@@ -64,11 +64,96 @@
 
     
     
+<p>Importamos el paquete:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/marcosziadi/PaqueteMeteorologia" class="external-link">PaqueteMeteorologia</a></span><span class="op">)</span></span></code></pre></div>
-<p>Esta es una viñeta de prueba. Podemos mostrar como funciona la
-funcion <code>suma</code>:</p>
-  </main>
+<div class="section level2">
+<h2 id="esta-es-una-viñeta-que-explica-el-uso-de-las-funciones-del-paquete-">Esta es una viñeta que explica el uso de las funciones del
+paquete.<a class="anchor" aria-label="anchor" href="#esta-es-una-vi%C3%B1eta-que-explica-el-uso-de-las-funciones-del-paquete-"></a>
+</h2>
+<div class="section level3">
+<h3 id="funcion-celsius_to_fahrenheit">Funcion <code>'celsius_to_fahrenheit'</code><a class="anchor" aria-label="anchor" href="#funcion-celsius_to_fahrenheit"></a>
+</h3>
+<p>Esta función toma una temperatura en grados Celsius y la convierte en
+grados Fahrenheit.</p>
+<p>Ejemplo de uso de la funcion <code>'celsius_to_fahrenheit'</code></p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/celsius_to_fahrenheit.html">celsius_to_fahrenheit</a></span><span class="op">(</span><span class="op">-</span><span class="fl">5</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] 23</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="funcion-descargar_datos">Funcion <code>'descargar_datos'</code><a class="anchor" aria-label="anchor" href="#funcion-descargar_datos"></a>
+</h3>
+<p>Esta función toma el ID de una estación y una dirección de ruta y
+descarga en dicha dirección un csv con los datos meteorologicos de la
+estación con dicho ID.</p>
+<p>Ejemplo de uso de la funcion <code>'descargar_datos'</code></p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">datos</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/descargar_datos.html">descargar_datos</a></span><span class="op">(</span><span class="st">"NH0098"</span>, <span class="st">"~/data"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: One or more parsing issues, call `problems()` on your data frame for details,</span></span>
+<span><span class="co">#&gt; e.g.:</span></span>
+<span><span class="co">#&gt;   dat &lt;- vroom(...)</span></span>
+<span><span class="co">#&gt;   problems(dat)</span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">23733</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">35</span></span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
+<span><span class="co">#&gt; <span style="color: #BB0000;">chr</span>   (2): id, direccion_viento_1000cm</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">dbl</span>  (21): temperatura_abrigo_150cm, temperatura_abrigo_150cm_maxima, temper...</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">lgl</span>  (11): temperatura_intemperie_50cm_minima, temperatura_inte_5cm, tempera...</span></span>
+<span><span class="co">#&gt; <span style="color: #0000BB;">date</span>  (1): fecha</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="funcion-grafico_temperatura_mensual">Funcion <code>'grafico_temperatura_mensual'</code><a class="anchor" aria-label="anchor" href="#funcion-grafico_temperatura_mensual"></a>
+</h3>
+<p>Esta funcion devuelve un gráfico que muestre el promedio mensual de
+la temperatura de abrigo.</p>
+<p>Ejemplo de uso de la funcion
+<code>'grafico_temperatura_mensual'</code></p>
+<p>Una estacion:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/grafico_temperatura_mensual.html">grafico_temperatura_mensual</a></span><span class="op">(</span><span class="va">datos</span>, titulo <span class="op">=</span> <span class="st">"Temperatura"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="vinieta_1_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
+<p>Varias estaciones:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">estaciones</span> <span class="op">&lt;-</span> <span class="fu">readr</span><span class="fu">::</span><span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="st">"../data/estaciones_merged.csv"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Rows: </span><span style="color: #0000BB;">95681</span> <span style="font-weight: bold;">Columns: </span><span style="color: #0000BB;">35</span></span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">──</span> <span style="font-weight: bold;">Column specification</span> <span style="color: #00BBBB;">────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">#&gt; <span style="font-weight: bold;">Delimiter:</span> ","</span></span>
+<span><span class="co">#&gt; <span style="color: #BB0000;">chr</span>   (2): id, direccion_viento_1000cm</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">dbl</span>  (24): temperatura_abrigo_150cm, temperatura_abrigo_150cm_maxima, temper...</span></span>
+<span><span class="co">#&gt; <span style="color: #BBBB00;">lgl</span>   (8): temperatura_inte_5cm, temperatura_intemperie_150cm_minima, humeda...</span></span>
+<span><span class="co">#&gt; <span style="color: #0000BB;">date</span>  (1): fecha</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Use `spec()` to retrieve the full column specification for this data.</span></span>
+<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.</span></span>
+<span></span>
+<span><span class="fu"><a href="../reference/grafico_temperatura_mensual.html">grafico_temperatura_mensual</a></span><span class="op">(</span><span class="va">estaciones</span>, titulo <span class="op">=</span> <span class="st">"Temperatura"</span><span class="op">)</span></span></code></pre></div>
+<p><img src="vinieta_1_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
+</div>
+<div class="section level3">
+<h3 id="funcion-tabla_resumen_temperatura_mensual">Funcion <code>'tabla_resumen_temperatura_mensual'</code><a class="anchor" aria-label="anchor" href="#funcion-tabla_resumen_temperatura_mensual"></a>
+</h3>
+<p>Esta función crea una tabla de resumen de la temperatura_abrigo_150cm
+para una o más estaciones.</p>
+<p>Ejemplo de uso de la funcion
+<code>'tabla_resumen_temperatura_mensual'</code></p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/tabla_resumen_temperatura.html">tabla_resumen_temperatura</a></span><span class="op">(</span><span class="va">estaciones</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 4</span></span></span>
+<span><span class="co">#&gt;   id     min_temp max_temp mean_temp</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> NH0046    -<span style="color: #BB0000;">0.25</span>     34.6      17.3</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> NH0098   -<span style="color: #BB0000;">17.4</span>      37.4      18.6</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> NH0437     2.1      36.3      20.2</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> NH0472     0.55     34.8      18.0</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> NH0910     0        35.2      17.7</span></span></code></pre></div>
+</div>
+</div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
