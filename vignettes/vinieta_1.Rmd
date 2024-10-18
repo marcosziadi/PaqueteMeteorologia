@@ -14,11 +14,60 @@ knitr::opts_chunk$set(
 )
 ```
 
+Importamos el paquete:
+
 ```{r setup}
 library(PaqueteMeteorologia)
 ```
 
-Esta es una viñeta de prueba. Podemos mostrar como funciona la funcion `suma`:
-```{r}
+## Esta es una viñeta que explica el uso de las funciones del paquete.
 
+### Funcion `'celsius_to_fahrenheit'`
+
+Esta función toma una temperatura en grados Celsius y la convierte en grados Fahrenheit.
+
+Ejemplo de uso de la funcion `'celsius_to_fahrenheit'`
+
+```{r}
+celsius_to_fahrenheit(-5)
+```
+
+### Funcion `'descargar_datos'`
+
+Esta función toma el ID de una estación y una dirección de ruta y descarga en dicha dirección un csv con los datos meteorologicos de la estación con dicho ID.
+
+Ejemplo de uso de la funcion `'descargar_datos'`
+
+```{r}
+datos <- descargar_datos("NH0098", "~/data")
+```
+
+### Funcion `'grafico_temperatura_mensual'`
+
+Esta funcion devuelve un gráfico que muestre el promedio mensual de la temperatura de abrigo.
+
+Ejemplo de uso de la funcion `'grafico_temperatura_mensual'`
+
+Una estacion:
+
+```{r}
+grafico_temperatura_mensual(datos, titulo = "Temperatura")
+```
+
+Varias estaciones:
+
+```{r}
+estaciones <- readr::read_csv("../data/estaciones_merged.csv")
+
+grafico_temperatura_mensual(estaciones, titulo = "Temperatura")
+```
+
+### Funcion `'tabla_resumen_temperatura_mensual'`
+
+Esta función crea una tabla de resumen de la temperatura_abrigo_150cm para una o más estaciones.
+
+Ejemplo de uso de la funcion `'tabla_resumen_temperatura_mensual'`
+
+```{r}
+tabla_resumen_temperatura(estaciones)
 ```
