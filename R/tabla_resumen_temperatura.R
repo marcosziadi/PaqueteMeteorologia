@@ -11,7 +11,7 @@
 #' tabla_resumen_temperatura(datos)
 tabla_resumen_temperatura <- function(datos) {
   resumen <- datos %>%
-    group_by(estacion) %>%
+    group_by(id) %>%
     summarise(
       min_temp = min(temperatura_abrigo_150cm, na.rm = TRUE),
       max_temp = max(temperatura_abrigo_150cm, na.rm = TRUE),
