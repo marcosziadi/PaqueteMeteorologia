@@ -8,8 +8,11 @@
 #' @export
 #'
 #' @examples
-#' estaciones_merged <- read.csv(system.file("data", "estaciones_merged.csv", package = "PaqueteMeteorologia"))
+#' # Cargar los datos de ejemplo desde el paquete
+#' data_path <- system.file("data", "estaciones_merged.rda", package = "PaqueteMeteorologia")
+#' load(data_path)
 #'
+#' # Llamar a la función usando los datos cargados
 #' tabla_resumen_temperatura(estaciones_merged)
 tabla_resumen_temperatura <- function(datos) {
   resumen <- datos %>%

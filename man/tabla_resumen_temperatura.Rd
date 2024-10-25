@@ -16,7 +16,10 @@ Devuelve una tabla resumen de la temperatura abrigo de las estaciones ingresadas
 La función \code{tabla_resumen_temperatura} crea una tabla de resumen de la temperatura_abrigo_150cm para una o más estaciones.
 }
 \examples{
-estaciones_merged <- read.csv(system.file("data", "estaciones_merged.csv", package = "PaqueteMeteorologia"))
+# Cargar los datos de ejemplo desde el paquete
+data_path <- system.file("data", "estaciones_merged.rda", package = "PaqueteMeteorologia")
+load(data_path)
 
+# Llamar a la función usando los datos cargados
 tabla_resumen_temperatura(estaciones_merged)
 }

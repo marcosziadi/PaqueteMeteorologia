@@ -39,7 +39,7 @@ Esta función toma el ID de una estación y una dirección de ruta y descarga en
 Ejemplo de uso de la funcion `'descargar_datos'`
 
 ```{r}
-datos <- descargar_datos("NH0098", "~/data")
+datos <- descargar_datos("NH0098", "ruta_de_ejemplo")
 ```
 
 ### Funcion `'grafico_temperatura_mensual'`
@@ -51,15 +51,15 @@ Ejemplo de uso de la funcion `'grafico_temperatura_mensual'`
 Una estacion:
 
 ```{r}
+load("../data/estaciones_merged.rda")
+
 grafico_temperatura_mensual(datos, titulo = "Temperatura")
 ```
 
 Varias estaciones:
 
 ```{r}
-estaciones <- readr::read_csv("../data/estaciones_merged.csv")
-
-grafico_temperatura_mensual(estaciones, titulo = "Temperatura")
+grafico_temperatura_mensual(estaciones_merged, titulo = "Temperatura")
 ```
 
 ### Funcion `'tabla_resumen_temperatura_mensual'`
@@ -69,5 +69,5 @@ Esta función crea una tabla de resumen de la temperatura_abrigo_150cm para una 
 Ejemplo de uso de la funcion `'tabla_resumen_temperatura_mensual'`
 
 ```{r}
-tabla_resumen_temperatura(estaciones)
+tabla_resumen_temperatura(estaciones_merged)
 ```
