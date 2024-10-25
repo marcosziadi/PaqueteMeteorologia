@@ -3,7 +3,7 @@
 \docType{data}
 \name{estaciones_merged}
 \alias{estaciones_merged}
-\title{Sexto conjunto de datos}
+\title{Conjunto de datos}
 \format{
 Los datos son obtenidos de un repositorio de GitHub.
 \describe{
