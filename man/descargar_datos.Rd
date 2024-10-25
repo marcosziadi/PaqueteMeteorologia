@@ -18,6 +18,6 @@ Un archivo csv con los datos meteorológicos de la estación con el ID ingresado
 La función \code{descargar_datos} toma el ID de una estación y una dirección de ruta y descarga en dicha dirección un csv con los datos meteorologicos de la estación con dicho ID. Los IDs posibles son: NH0098, NH0046, NH437, NH472 y NH0910.
 }
 \examples{
-descargar_datos("NH0098", "~/")
-descargar_datos("NH0910", "~/")
+descargar_datos("NH0098", "~/NH0098.csv")
+descargar_datos("NH0910", "~/NH0910.csv")
 }

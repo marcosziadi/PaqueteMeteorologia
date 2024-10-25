@@ -8,7 +8,8 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-NH0046 <- "NH0046"
+#' @export
+NH0046 <- read.csv("data/NH0046.csv")
 
 #' Segundo conjunto de datos
 #'
@@ -20,7 +21,8 @@ NH0046 <- "NH0046"
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-NH0098 <- "NH0098"
+#' @export
+NH0098 <- read.csv("data/NH0098.csv")
 
 #' Tercer conjunto de datos
 #'
@@ -32,7 +34,8 @@ NH0098 <- "NH0098"
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-NH0437 <-"NH0437"
+#' @export
+NH0437 <- read.csv("data/NH0437.csv")
 
 #' Cuarto conjunto de datos
 #'
@@ -44,7 +47,8 @@ NH0437 <-"NH0437"
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-NH0472 <- "NH0472"
+#' @export
+NH0472 <- read.csv("data/NH0472.csv")
 
 #' Quinto conjunto de datos
 #'
@@ -56,4 +60,31 @@ NH0472 <- "NH0472"
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-NH0910 <- "NH0910"
+#' @export
+NH0910 <- read.csv("data/NH0910.csv")
+
+#' Sexto conjunto de datos
+#'
+#' Los datos contienen información de las distintas estaciones meteorológicas.
+#'
+#' @format Los datos son obtenidos de un repositorio de GitHub.
+#' \describe{
+#' \item{estaciones_merged}{muestra de datos de todas las estaciones.}
+#' }
+#'
+#' @source Fuente: repositorio de GitHub.
+#' @export
+estaciones_merged <- read.csv("data/estaciones_merged.csv")
+
+#' Septimo conjunto de datos
+#'
+#' Los datos contienen información de las distintas estaciones meteorológicas.
+#'
+#' @format Los datos son obtenidos de un repositorio de GitHub.
+#' \describe{
+#' \item{metadatos_completos}{muestra de metadatos de todas las estaciones}
+#' }
+#'
+#' @source Fuente: repositorio de GitHub.
+#' @export
+metadatos_completos <- read.csv("data/metadatos_completos.csv")

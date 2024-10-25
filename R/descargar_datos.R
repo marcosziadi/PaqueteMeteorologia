@@ -12,8 +12,8 @@
 #' @export
 #'
 #' @examples
-#' descargar_datos("NH0098", "~/")
-#' descargar_datos("NH0910", "~/")
+#' descargar_datos("NH0098", "~/NH0098.csv")
+#' descargar_datos("NH0910", "~/NH0910.csv")
 descargar_datos <- function(id_estacion, ruta_archivo) {
   url_repositorio <- "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/"
 

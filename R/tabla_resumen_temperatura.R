@@ -8,7 +8,9 @@
 #' @export
 #'
 #' @examples
-#' tabla_resumen_temperatura(datos)
+#' estaciones_merged <- read.csv(system.file("data", "estaciones_merged.csv", package = "PaqueteMeteorologia"))
+#'
+#' tabla_resumen_temperatura(estaciones_merged)
 tabla_resumen_temperatura <- function(datos) {
   resumen <- datos %>%
     group_by(id) %>%

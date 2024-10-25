@@ -20,5 +20,7 @@ Genera un gráfico de la temperatura mensual del data.frame con el título y los
 La funcion \code{grafico_temperatura_mensual} devuelve un gráfico que muestre el promedio mensual de la temperatura de abrigo.
 }
 \examples{
-grafico_temperatura_mensual(datos, colores, titulo)
+estaciones_merged <- read.csv(system.file("data", "estaciones_merged.csv", package = "PaqueteMeteorologia"))
+
+grafico_temperatura_mensual(estaciones_merged, NULL, "Temperatura Mensual Promedio")
 }
