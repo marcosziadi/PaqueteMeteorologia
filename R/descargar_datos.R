@@ -8,6 +8,7 @@
 #' Un archivo CSV con los datos meteorológicos de la estación con el ID ingresado.
 #'
 #' @import readr
+#' @importFrom utils download.file
 #'
 #' @export
 #'

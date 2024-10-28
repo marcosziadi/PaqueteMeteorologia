@@ -11,6 +11,7 @@
 #' @import ggplot2
 #' @import dplyr
 #' @import lubridate
+#' @importFrom grDevices colors
 #'
 #' @export
 #'
@@ -21,6 +22,8 @@
 #'
 #' # Llamar a la función usando los datos cargados
 #' grafico_temperatura_mensual(estaciones_merged, NULL, "Temperatura Mensual Promedio")
+
+
 grafico_temperatura_mensual <- function(datos, colores = NULL, titulo = "Temperatura") {
   # Asegúrate de que la columna fecha esté en el formato correcto
   datos$fecha <- as.Date(datos$fecha)  # Ajusta esto según el formato de tus datos
