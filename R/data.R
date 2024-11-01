@@ -8,5 +8,5 @@
 #' }
 #'
 #' @source Fuente: repositorio de GitHub.
-#' @export
-estaciones_merged <- load("data/estaciones_merged.rda")
+#'
+"estaciones_merged"
