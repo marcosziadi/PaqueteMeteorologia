@@ -17,8 +17,7 @@
 #'
 #' @examples
 #' # Cargar los datos de ejemplo desde el paquete
-#' data_path <- system.file("data", "estaciones_merged.rda", package = "PaqueteMeteorologia")
-#' load(data_path)
+#' data("estaciones_merged")
 #'
 #' # Llamar a la función usando los datos cargados
 #' grafico_temperatura_mensual(estaciones_merged, NULL, "Temperatura Mensual Promedio")

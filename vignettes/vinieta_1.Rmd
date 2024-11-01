@@ -51,7 +51,7 @@ Ejemplo de uso de la funcion `'grafico_temperatura_mensual'`
 Una estacion:
 
 ```{r}
-load("../data/estaciones_merged.rda")
+data("estaciones_merged")
 
 grafico_temperatura_mensual(datos, titulo = "Temperatura")
 ```
