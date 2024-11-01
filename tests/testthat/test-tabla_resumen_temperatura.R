@@ -1,8 +1,6 @@
 test_that("tabla_resumen_temperatura funciona correctamente", {
   # Cargar los datos de ejemplo
-  data_path <- system.file("data", "estaciones_merged.rda", package = "PaqueteMeteorologia")
-  load(data_path)
-
+  data("estaciones_merged")
   # Ejecutar la función
   resultado <- tabla_resumen_temperatura(estaciones_merged)
 
