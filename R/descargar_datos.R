@@ -16,6 +16,14 @@
 #' descargar_datos("NH0098", "data")
 #' descargar_datos("NH0910", "data")
 descargar_datos <- function(id_estacion, directorio_destino) {
+  # Lista de ID de estaciones permitidos
+  ids_permitidos <- c("NH0472", "NH0910", "NH0046", "NH0098", "NH0437")
+
+  # Verificar si id_estacion es válido
+  if (!id_estacion %in% ids_permitidos) {
+    cli::cli_abort(paste0("Error: El ID de estación '", id_estacion, "' no es válido. Los ID permitidos son: ", paste(ids_permitidos, collapse = ", ")))
+  }
+
   url_repositorio <- "https://raw.githubusercontent.com/rse-r/intro-programacion/main/datos/"
   estacion_url <- paste0(url_repositorio, id_estacion, ".csv")
 

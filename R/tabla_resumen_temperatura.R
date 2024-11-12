@@ -14,6 +14,12 @@
 #' # Llamar a la función usando los datos cargados
 #' tabla_resumen_temperatura(estaciones_merged)
 tabla_resumen_temperatura <- function(datos) {
+  # Verificar si datos es un dataframe
+  if (!is.data.frame(datos)) {
+    cli::cli_abort("Error: El objeto 'datos' debe ser un dataframe.")
+  }
+
+  # Calcular el resumen
   resumen <- datos %>%
     group_by(id) %>%
     summarise(
@@ -21,5 +27,6 @@ tabla_resumen_temperatura <- function(datos) {
       max_temp = max(temperatura_abrigo_150cm, na.rm = TRUE),
       mean_temp = mean(temperatura_abrigo_150cm, na.rm = TRUE)
     )
+
   return(resumen)
 }
