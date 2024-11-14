@@ -1,6 +1,10 @@
+---
+output: github_document
+---
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PaqueteMeteorologia <img src="man/figures/paquetemeteorologia.png" aling="right" width="120"/>
+# PaqueteMeteorologia <img src="man/figures/paquetemeteorologia.png" align="right" width="120"/>
 
 <!-- badges: start -->
 

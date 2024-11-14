@@ -1,18 +1,23 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# PaqueteMeteorologia <img src="man/figures/paquetemeteorologia.png" aling="right" width="120"/>
+# PaqueteMeteorologia <img src="man/figures/paquetemeteorologia.png" align="right" width="120"/>
 
 <!-- badges: start -->
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental) [![R-CMD-check](https://github.com/marcosziadi/PaqueteMeteorologia/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/marcosziadi/PaqueteMeteorologia/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/marcosziadi/PaqueteMeteorologia/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/marcosziadi/PaqueteMeteorologia/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
 
-El objetivo del PaqueteMeteorologia es el analisis de dataset de datos de estaciones meteorologicas.
+El objetivo del PaqueteMeteorologia es el analisis de dataset de datos
+de estaciones meteorologicas.
 
 ## Instalacion
 
-Puedes instalar el PaqueteMeteorologia desde [GitHub](https://github.com/) con:
+Puedes instalar el PaqueteMeteorologia desde
+[GitHub](https://github.com/) con:
 
 ``` r
 # install.packages("pak")
@@ -51,11 +56,14 @@ tabla_resumen_temperatura(estaciones_merged)
 #> 5 NH0910     0        35.2      17.7
 ```
 
-Para ver el uso de todas las funciones del paquete puede ingresar a la siguiente pagina: [PaqueteMeteorologia](https://marcosziadi.github.io/PaqueteMeteorologia/)
+Para ver el uso de todas las funciones del paquete puede ingresar a la
+siguiente pagina:
+[PaqueteMeteorologia](https://marcosziadi.github.io/PaqueteMeteorologia/)
 
 # Contribuciones al paquete
 
-Si deseas realizar contribuciones al paquete debes ver el codigo de contribucion:
+Si deseas realizar contribuciones al paquete debes ver el codigo de
+contribucion:
 
 <https://github.com/marcosziadi/PaqueteMeteorologia/blob/master/.github/CONTRIBUTING.md>
 
