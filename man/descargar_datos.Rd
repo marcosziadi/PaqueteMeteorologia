@@ -2,20 +2,20 @@
 % Please edit documentation in R/descargar_datos.R
 \name{descargar_datos}
 \alias{descargar_datos}
-\title{Descargar datos meteorológicos}
+\title{Descargar datos meteorologicos}
 \usage{
 descargar_datos(id_estacion, directorio_destino)
 }
 \arguments{
-\item{id_estacion}{ID de la estación.}
+\item{id_estacion}{ID de la estacion.}
 
-\item{directorio_destino}{Directorio donde se guardará el archivo CSV.}
+\item{directorio_destino}{Directorio donde se guardara el archivo CSV.}
 }
 \value{
-Un archivo CSV con los datos meteorológicos de la estación con el ID ingresado.
+Un archivo CSV con los datos meteorologicos de la estacion con el ID ingresado.
 }
 \description{
-La función \code{descargar_datos} toma el ID de una estación y un directorio de destino, y descarga en dicha ubicación un archivo CSV con los datos meteorológicos de la estación correspondiente. Los IDs posibles son: NH0098, NH0046, NH437, NH472 y NH0910.
+La funcion \code{descargar_datos} toma el ID de una estacion y un directorio de destino, y descarga en dicha ubicacion un archivo CSV con los datos meteorologicos de la estacion correspondiente. Los IDs posibles son: NH0098, NH0046, NH437, NH472 y NH0910.
 }
 \examples{
 descargar_datos("NH0098", "data")

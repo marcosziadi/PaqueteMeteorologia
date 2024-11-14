@@ -5,6 +5,7 @@
 ^pkgdown$
 ^\.github$
 ^LICENSE\.md$
+^data_row$
 ^\.DS_Store$
 ^README\.Rmd$
 ^CODE_OF_CONDUCT\.md$
